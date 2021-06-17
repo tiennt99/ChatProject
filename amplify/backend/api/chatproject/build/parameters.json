@@ -1,0 +1,14 @@
+{
+    "CreateAPIKey": 0,
+    "AppSyncApiName": "chatproject",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authchatproject8ebebdcd",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "S3DeploymentBucket": "amplify-chatproject-dev-223023-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/cef53ecfaedd98e14fe3be05417f7a20e5f983ae"
+}

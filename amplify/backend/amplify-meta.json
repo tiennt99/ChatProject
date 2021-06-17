@@ -1,0 +1,64 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-chatproject-dev-223023-authRole",
+      "UnauthRoleArn": "arn:aws:iam::476585224991:role/amplify-chatproject-dev-223023-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::476585224991:role/amplify-chatproject-dev-223023-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-chatproject-dev-223023-deployment",
+      "UnauthRoleName": "amplify-chatproject-dev-223023-unauthRole",
+      "StackName": "amplify-chatproject-dev-223023",
+      "StackId": "arn:aws:cloudformation:us-east-1:476585224991:stack/amplify-chatproject-dev-223023/c7de8c40-ceb7-11eb-b852-0efae2996d3d",
+      "AmplifyAppId": "d2l4wstfszklyj",
+      "AuthTriggerTemplateURL": ""
+    }
+  },
+  "auth": {
+    "chatproject8ebebdcd": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-chatproject-dev-223023-deployment/amplify-cfn-templates/auth/chatproject8ebebdcd-cloudformation-template.yml",
+        "logicalId": "authchatproject8ebebdcd"
+      },
+      "lastPushTimeStamp": "2021-06-17T14:10:38.566Z",
+      "output": {
+        "UserPoolId": "us-east-1_G7H0uIJDx",
+        "AppClientIDWeb": "35nvsj61b0v4hs6kj2leeb3lrg",
+        "AppClientID": "52euhiihm1mr2g6k84iv3bqi54",
+        "IdentityPoolId": "us-east-1:e9c872ec-2949-4013-9e71-d8f811603928",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:476585224991:userpool/us-east-1_G7H0uIJDx",
+        "IdentityPoolName": "chatproject8ebebdcd_identitypool_8ebebdcd__dev",
+        "UserPoolName": "chatproject8ebebdcd_userpool_8ebebdcd"
+      },
+      "lastPushDirHash": "clIwupWoXElngOid3PS82fipA+8="
+    }
+  },
+  "api": {
+    "chatproject": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authchatproject8ebebdcd"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "efgsbjx3ufes3mrlkyinfa63pe",
+        "GraphQLAPIEndpointOutput": "https://tdztvksj6rd7zjmpgyxdnfcvla.appsync-api.us-east-1.amazonaws.com/graphql"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-chatproject-dev-223023-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apichatproject"
+      },
+      "lastPushTimeStamp": "2021-06-17T14:10:45.836Z",
+      "lastPushDirHash": "h2IusIIgPbPJDKjZAZI8BNk95zc="
+    }
+  }
+}
